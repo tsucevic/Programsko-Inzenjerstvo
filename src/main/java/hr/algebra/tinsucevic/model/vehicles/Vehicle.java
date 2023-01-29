@@ -1,11 +1,15 @@
 package hr.algebra.tinsucevic.model.vehicles;
 
 public class Vehicle implements IRefuelable {
+
     private double fuelPercentage;
     private final FuelType fuelType;
 
     public double getFuelPercentage() {
         return fuelPercentage;
+    }
+    public void setFuelPercentage(double fuelPercentage) {
+        this.fuelPercentage = fuelPercentage;
     }
 
     public FuelType getFuelType() {
@@ -30,7 +34,7 @@ public class Vehicle implements IRefuelable {
         {
             return fuelPercentage <=10;
         } else if (fuelType ==  FuelType.BATTERY) {
-            return  fuelPercentage <=11;
+            return  fuelPercentage <=10;
         }
         return false;
     }

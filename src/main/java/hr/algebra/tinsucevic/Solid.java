@@ -30,6 +30,19 @@ public class Solid  {
         employee1.ParkVehicle(van, trainSmall);
         System.out.println(trainSmall);
 
+        Vehicle carFromFactory = VehicleFactory.getVehicle("car", FuelType.BATTERY);
+        Vehicle busFromFactory = VehicleFactory.getVehicle("bus", FuelType.GAS);
+        Vehicle vanFromFactory = VehicleFactory.getVehicle("van", FuelType.BATTERY);
+        Vehicle lorryFromFactory = VehicleFactory.getVehicle("lorry", FuelType.GAS);
+
+        employee1.ParkVehicle(busFromFactory, trainBig);
+        employee1.ParkVehicle(lorryFromFactory, trainBig);
+        System.out.println(trainBig);
+
+        employee2.ParkVehicle(carFromFactory, trainSmall);
+        employee2.ParkVehicle(vanFromFactory, trainSmall);
+        System.out.println(trainSmall);
+
         System.out.println(employee1);
         System.out.println(employee2);
     }

@@ -33,10 +33,10 @@ public class Employee {
             vehicle.Refuel();
         }
         train.AddVehicle(vehicle);
-        IChargeable cijena = (IChargeable) vehicle;
-        double tempProvision = provision/100 * cijena.CalculateCharge();
+        IChargeable price = (IChargeable) vehicle;
+        double tempProvision = provision/100 * price.CalculateCharge();
         salary += tempProvision;
-        profitGenerated += cijena.CalculateCharge() - tempProvision;
+        profitGenerated += price.CalculateCharge() - tempProvision;
     }
 
     @Override
